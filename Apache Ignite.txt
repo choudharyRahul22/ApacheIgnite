@@ -1,0 +1,31 @@
+Apache Ignite:
+--------------
+Docker: is virtual machine.
+docker start
+apache how to read data from persistant store
+
+OSE is running for dev environment.
+
+connect to db and ignite
+
+DROP TABLE IF EXISTS POSTS;
+CREATE TABLE POSTS (
+  id           VARCHAR(150),
+  title        VARCHAR(255),
+  description  TEXT,
+  creationDate DATE,
+  author       VARCHAR(150)
+);
+
+CREATE UNIQUE INDEX posts_id_uindex ON POSTS (id);
+ALTER TABLE POSTS
+  ADD CONSTRAINT posts_id_pk PRIMARY KEY (id);
+
+UPDATE POSTS SET id=0 WHERE id IS NULL;
+ALTER TABLE POSTS MODIFY id VARCHAR(150) NOT NULL;
+
+
+Docker:
+-------
+
+
