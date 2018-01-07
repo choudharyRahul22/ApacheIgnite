@@ -1,5 +1,7 @@
 Apache Ignite:
 --------------
+docker run -it --net=host -e "CONFIG_URI=https://raw.githubusercontent.com/apache/ignite/master/examples/config/example-cache.xml" apacheignite/ignite
+
 Docker: is virtual machine.
 docker start
 apache how to read data from persistant store

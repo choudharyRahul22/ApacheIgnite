@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+
+  node:
+    container_name: nodeapp
+    image: nodeapp
+    build:
+      context: .
+      dockerfile: node.dev.dockerfile
+    volumes:
+      - .:/var/www/socketio
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3000:3000"
+    networks:
+      - nodeapp-network
+
+networks:
+    nodeapp-network:
+      driver: bridge
