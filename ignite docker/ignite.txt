@@ -1,0 +1,3 @@
+// go to this dir where Dockerfile and run.sh is there
+// and run below command
+docker build .
